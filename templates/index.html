@@ -16,13 +16,10 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- Owl Carousel-->
   <link rel="stylesheet" href="{{ url_for('static', filename='js/owlcarousel/assets/owl.carousel.css') }}"">
-  <script src=" {{ url_for('static', filename='js/owlcarousel/owl.carousel.min.js' ) }}">
-  </script>
+  <link rel=" stylesheet" href="{{ url_for('static', filename='js/owlcarousel/assets/owl.carousel.min.css') }}"">
   <!-- Font Awesome -->
   <script src=" https://kit.fontawesome.com/8ec0406f5a.js" crossorigin="anonymous">
   </script>
-  <!-- JQuerry -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Main Stylesheet File -->
   <link rel=" stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -88,15 +85,15 @@
 
     <div id="intro-carousel" class="owl-carousel">
       <div class="item"
-        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/intro_1.png') }}');"></div>
+        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/1.jpg') }}');"></div>
       <div class="item"
-        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/intro_2.jpg') }}');"></div>
+        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/2.jpg') }}');"></div>
       <div class="item"
-        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/intro_3.jpg') }}');"></div>
+        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/3.jpg') }}');"></div>
       <div class="item"
-        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/intro_4.jpg') }}');"></div>
+        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/4.jpg') }}');"></div>
       <div class="item"
-        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/intro_5.jpg') }}');"></div>
+        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/5.jpg') }}');"></div>
     </div>
 
   </section><!-- #intro -->
@@ -194,13 +191,12 @@
         </div>
 
         <div class="row">
-
           <div class="col-lg-6">
             <div class="box wow fadeInLeft">
               <div class="icon"><i class="fa-solid fa-shop"></i></div>
-              <h4 class="title"><a href=""> {% if lang == "zh" %}市场产品少{% else %}Few Products on market{% endif %}</a>
+              <h4 class="title">{% if lang == "zh" %}市场产品少{% else %}Few Products on market{% endif %}
               </h4>
-              <p class="description">{% if lang == "zh" %}目前全球市场上植物奶工业化生产常温包装仅有燕麦奶/杏仁奶豆奶/椰奶/米奶等选择性少且营养含量较低{% else %} {%
+              <p class="description">{% if lang == "zh" %}目前全球市场上植物奶工业化生产常温包装仅有燕麦奶/杏仁奶豆奶/椰奶/米奶等选择性少且营养含量较低。{% else %} {%
                 endif %}
               </p>
             </div>
@@ -209,11 +205,11 @@
           <div class="col-lg-6">
             <div class="box wow fadeInRight">
               <div class="icon"><i class="fa-solid fa-earth-europe"></i></div>
-              <h4 class="title"><a href="">{% if lang == "zh" %}先进市场高涨
-                  {% else %}
-                  {% endif %}
-                </a></h4>
-              <p class="description">{% if lang == "zh" %}澳洲植物奶从20年前一路上涨，现在占有全球50%的市场美国也一路上涨到将近全球30%{% else %} {% endif
+              <h4 class="title">{% if lang == "zh" %}先进市场高涨
+                {% else %}
+                {% endif %}
+              </h4>
+              <p class="description">{% if lang == "zh" %}澳洲植物奶从20年前一路上涨，现在占有全球50%的市场美国也一路上涨到将近全球30%。{% else %} {% endif
                 %}
               </p>
             </div>
@@ -222,8 +218,8 @@
           <div class="col-lg-6">
             <div class="box wow fadeInLeft" data-wow-delay="0.2s">
               <div class="icon"><i class="fa-solid fa-industry"></i></div>
-              <h4 class="title"><a href="">{% if lang == "zh" %}食品工业三化{% else %}{% endif %}</a></h4>
-              <p class="description">{% if lang == "zh" %}全球食品工业三化优质化/营养化/功能化不可逆的发展趋势世界各国对植物奶的饮用及使用都大量增加{% else %}{%
+              <h4 class="title">{% if lang == "zh" %}食品工业三化{% else %}{% endif %}</h4>
+              <p class="description">{% if lang == "zh" %}全球食品工业三化优质化/营养化/功能化不可逆的发展趋势世界各国对植物奶的饮用及使用都大量增加。{% else %}{%
                 endif %}
               </p>
             </div>
@@ -232,9 +228,10 @@
           <div class="col-lg-6">
             <div class="box wow fadeInRight" data-wow-delay="0.2s">
               <div class="icon"><i class="fa-solid fa-seedling"></i></div>
-              <h4 class="title"><a href="">{% if lang == "zh" %}植物奶超牛奶{% else %}{% endif %}
-                </a></h4>
-              <p class="description">{% if lang == "zh" %}全球有机与功能性食品的开发及健康饮食和体态管理的趋势加上动物疫病的食安问题植物奶的成长率已经高于牛奶{% else %}{%
+              <h4 class="title">{% if lang == "zh" %}植物奶超牛奶{% else %}{% endif %}
+              </h4>
+              <p class="description">{% if lang == "zh" %}全球有机与功能性食品的开发及健康饮食和体态管理的趋势加上动物疫病的食安问题植物奶的成长率已经高于牛奶。{% else
+                %}{%
                 endif %}
               </p>
             </div>
@@ -242,22 +239,22 @@
           <div class="col-lg-6">
             <div class="box wow fadeInLeft" data-wow-delay="0.2s">
               <div class="icon"><i class="fa-solid fa-key"></i></div>
-              <h4 class="title"><a href="">{% if lang == "zh" %}全球专利设备{% else %}
-                  {% endif %}
-                </a></h4>
+              <h4 class="title">{% if lang == "zh" %}全球专利设备{% else %}
+                {% endif %}
+              </h4>
               <p class="description">{% if lang ==
-                "zh"%}奈米有机零添加芽菜生产设备是利用高新技术加上材料科学将矿物质和抑菌材料植入芽菜培植桶/盘，根据不同芽菜的特性设定相宜的磁场与能量场通过机械化/自动化/智能化/规模化彻底解决了芽菜生产过程{%
+                "zh"%}奈米有机零添加芽菜生产设备是利用高新技术加上材料科学将矿物质和抑菌材料植入芽菜培植桶/盘，根据不同芽菜的特性设定相宜的磁场与能量场通过机械化/自动化/智能化/规模化彻底解决了芽菜生产过程。{%
                 else %}{% endif %}</p>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="box wow fadeInRight" data-wow-delay="0.2s">
               <div class="icon"><i class="fa-solid fa-flag"></i></div>
-              <h4 class="title"><a href="">{% if lang == "zh" %}中國市場{% else %}
-                  {% endif %}
-                </a></h4>
+              <h4 class="title">{% if lang == "zh" %}中國市場{% else %}
+                {% endif %}
+              </h4>
               <p class="description">{% if lang ==
-                "zh"%}针对我国食品结构中蛋白质偏低、奶源缺乏的问题，开发含乳饮料蛋白新品种，丰富乳制品市场，成为食品工业的重要任务植物蛋白饮料的迅速发展，得益于消费者健康意识的提升和对企业品牌、产品多样化的追求{%
+                "zh"%}针对我国食品结构中蛋白质偏低、奶源缺乏的问题，开发含乳饮料蛋白新品种，丰富乳制品市场，成为食品工业的重要任务植物蛋白饮料的迅速发展，得益于消费者健康意识的提升和对企业品牌、产品多样化的追求。{%
                 else %}{% endif %}</p>
             </div>
           </div>
@@ -283,7 +280,7 @@
             </div>
             <p>{% if lang == "zh" %}
               当前，中国大豆产量全球排名第四位，大豆消费量和大豆进口量均居全球第一位但，目前我国大豆深加工能力不到10%，深加工产品科技附加值较低，大豆深加工产业链不完整其中，植物蛋白饮品具有低胆固醇、低饱和脂肪、含有植物蛋白、健康养生等优点，符合健康消费趋势而，胚豆芽
-              是所有蔬菜里“植物蛋白”含量最高的蔬菜，并兼具食疗作用 ！
+              是所有蔬菜里“植物蛋白”含量最高的蔬菜，并兼具食疗作用！
               {% else %}
               {% endif %}
             </p>
@@ -301,7 +298,7 @@
             </h3>
             <ul>
               <li><i class="ion-android-checkmark-circle"></i>{% if lang == "zh" %}
-                唤醒了豆子的维生素以及 B群的增加
+                唤醒了豆子的维生素以及B群的增加。
                 {% else %}
                 Premium by Nature
                 Rooted in the values of natural, high-quality, and organic ingredients, our brand is dedicated to
@@ -309,7 +306,7 @@
                 {% endif %}
               </li>
               <li><i class="ion-android-checkmark-circle"></i>{% if lang == "zh" %}
-                胚芽中释放了被螯合的微量元素，让胚芽豆具备更多的营养价值
+                胚芽中释放了被螯合的微量元素，让胚芽豆具备更多的营养价值。
                 {% else %}
                 Cultural Essence
                 Inspired by the meanings behind our name — "Jiu" for longevity, "Mi" for sweetness, "Mu" for
@@ -318,20 +315,20 @@
                 {% endif %}
               </li>
               <li><i class="ion-android-checkmark-circle"></i>{% if lang == "zh" %}
-                胚芽豆在发芽过程里，痛风因子【嘌呤】也大量的减少
+                胚芽豆在发芽过程里，痛风因子【嘌呤】也大量的减少。
                 {% else %}
                 Pure and Natural
                 All our products are free from additives, crafted with a commitment to purity.
                 {% endif %}
               </li>
               <li><i class="ion-android-checkmark-circle"></i>{% if lang == "zh" %}
-                发芽后的胚芽豆的抗氧化剂多酚及黄酮类元素也增加很多
+                发芽后的胚芽豆的抗氧化剂多酚及黄酮类元素也增加很多。
                 {% else %}
                 Diverse Experiences
                 We cater to a wide range of needs, from everyday foods to thoughtful gifts.
                 {% endif %}
               </li>
-              <li><i class="ion-android-checkmark-circle"></i>{% if lang == "zh" %}发芽后的胚芽豆膳食纤维增加了，人体需要的赖氨酸氨基酸也增加了
+              <li><i class="ion-android-checkmark-circle"></i>{% if lang == "zh" %}发芽后的胚芽豆膳食纤维增加了，人体需要的赖氨酸氨基酸也增加了。
                 {% else %}
                 Sustainable Care
                 Our packaging is eco-friendly and biodegradable, reflecting our dedication to sustainability.
@@ -339,7 +336,7 @@
               </li>
             </ul>
             <h3>{% if lang == "zh" %}
-              我们优碧芽专利催芽技术与设备科技，能让种子在适当的环境中发芽，是全球首例的植物催芽科技{% else %}{% endif %}
+              我们优碧芽专利催芽技术与设备科技，能让种子在适当的环境中发芽，是全球首例的植物催芽科技。{% else %}{% endif %}
             </h3>
 
           </div>
@@ -354,13 +351,13 @@
     <section id="services">
       <div class="container">
         <div class="section-header">
-          <h2>{% if lang == "zh" %}多样化的 植物蛋白营养 新鲜食材
+          <h2>{% if lang == "zh" %}多样化的植物蛋白营养新鲜食材
             {% else %}
             Sustainable Care
             Our packaging is eco-friendly and biodegradable, reflecting our dedication to sustainability.</h2>
           {% endif %}
           <h3>{% if lang == "zh" %}
-            胚芽奶及胚芽豆對人體健康的優勢與特色
+            胚芽奶及胚芽豆对人体健康的优势与特色
             {% else %}
             Sustainable Care
             Our packaging is eco-friendly and biodegradable, reflecting our dedication to sustainability.
@@ -382,10 +379,10 @@
           <div class="col-lg-6">
             <div class="box wow fadeInRight">
               <div class="icon"><i class="fa fa-picture-o"></i></div>
-              <h4 class="title"><a href="">{% if lang == "zh" %}高级蛋白质和氨基酸
-                  {% else %}
-                  {% endif %}
-                </a></h4>
+              <h4 class="title">{% if lang == "zh" %}高级蛋白质和氨基酸
+                {% else %}
+                {% endif %}
+              </h4>
               <p class="description">{% if lang == "zh" %}发芽过程提高了蛋白质含量和必需氨基酸的可用性{% else %} {% endif
                 %}
               </p>
@@ -395,7 +392,7 @@
           <div class="col-lg-6">
             <div class="box wow fadeInLeft" data-wow-delay="0.2s">
               <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-              <h4 class="title"><a href="">{% if lang == "zh" %}提高消化率{% else %}{% endif %}</a></h4>
+              <h4 class="title">{% if lang == "zh" %}提高消化率{% else %}{% endif %}</h4>
               <p class="description">{% if lang == "zh" %}发芽部分分解复杂的碳水化合物、纤维和蛋白质，使胚芽奶更容易消化{% else %}{%
                 endif %}
               </p>
@@ -405,8 +402,8 @@
           <div class="col-lg-6">
             <div class="box wow fadeInRight" data-wow-delay="0.2s">
               <div class="icon"><i class="fa fa-map"></i></div>
-              <h4 class="title"><a href="">{% if lang == "zh" %}天然甜味{% else %}{% endif %}
-                </a></h4>
+              <h4 class="title">{% if lang == "zh" %}天然甜味{% else %}{% endif %}
+              </h4>
               <p class="description">{% if lang == "zh" %}发芽过程可以将一些淀粉转化为单糖，为胚芽奶带来自然更甜的味道{% else %}{%
                 endif %}
               </p>
@@ -415,9 +412,9 @@
           <div class="col-lg-6">
             <div class="box wow fadeInLeft" data-wow-delay="0.2s">
               <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-              <h4 class="title"><a href="">{% if lang == "zh" %}增强的抗氧化剂和维生素{% else %}
-                  {% endif %}
-                </a></h4>
+              <h4 class="title">{% if lang == "zh" %}增强的抗氧化剂和维生素{% else %}
+                {% endif %}
+              </h4>
               <p class="description">{% if lang ==
                 "zh"%}发芽通常会增加维生素含量，尤其是叶酸等 B族维生素，以及维生素 C和维生素 E等抗氧化剂程{%
                 else %}{% endif %}</p>
@@ -426,9 +423,9 @@
           <div class="col-lg-6">
             <div class="box wow fadeInRight" data-wow-delay="0.2s">
               <div class="icon"><i class="fa fa-map"></i></div>
-              <h4 class="title"><a href="">{% if lang == "zh" %}更奶油的质地和更浓郁的风味{% else %}
-                  {% endif %}
-                </a></h4>
+              <h4 class="title">{% if lang == "zh" %}更奶油的质地和更浓郁的风味{% else %}
+                {% endif %}
+              </h4>
               <p class="description">{% if lang ==
                 "zh"%}发芽可以导致更光滑、更奶油的质地，因为发芽的坚果和种子会释放更多的天然油脂这
                 种质地可以使牛奶非常适合用于咖啡、冰沙或烹饪{%
@@ -438,9 +435,9 @@
           <div class="col-lg-6">
             <div class="box wow fadeInLeft" data-wow-delay="0.2s">
               <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-              <h4 class="title"><a href="">{% if lang == "zh" %}较低的过敏性{% else %}
-                  {% endif %}
-                </a></h4>
+              <h4 class="title">{% if lang == "zh" %}较低的过敏性{% else %}
+                {% endif %}
+              </h4>
               <p class="description">{% if lang ==
                 "zh"%}发芽可能有助于减少某些坚果和豆类的过敏可能性{%
                 else %}{% endif %}</p>
@@ -449,9 +446,9 @@
           <div class="col-lg-6">
             <div class="box wow fadeInRight" data-wow-delay="0.2s">
               <div class="icon"><i class="fa fa-map"></i></div>
-              <h4 class="title"><a href="">{% if lang == "zh" %}更奶油的质地和更浓郁的风味{% else %}
-                  {% endif %}
-                </a></h4>
+              <h4 class="title">{% if lang == "zh" %}更奶油的质地和更浓郁的风味{% else %}
+                {% endif %}
+              </h4>
               <p class="description">{% if lang ==
                 "zh"%}发芽植物奶是有机的，加工程
                 度最低{%
@@ -462,8 +459,6 @@
 
         </div>
     </section><!-- #services_2 -->
-
-
     <!--Table-->
     <section id="table" class="wow fadeInUp">
       <div class="container">
@@ -522,8 +517,8 @@
       <div class="container">
         <div class="section-header">
           <h2>{% if lang == "zh" %}农食科技{% else %}{% endif %}</h2>
-          <p>{% if lang == "zh" %}胚芽奶 一个全球空白的市场
-            全球第一个 零添加 无毒 健康有机 “活”的胚芽豆与芽菜种植技术与设备{% else %}{% endif %}</p>
+          <p>{% if lang == "zh" %}胚芽奶--一个全球空白的市场
+            全球第一个"零添加""无毒""健康有机""活"的胚芽豆与芽菜种植技术与设备{% else %}{% endif %}</p>
         </div>
         <div>
           <img src={{ url_for('static', filename='images/process.jpg' )}}>
@@ -749,7 +744,11 @@
   <!-- Javascripts -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+  <!-- JQuerry-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- owl carousel -->
+  <script src=" {{ url_for('static', filename='js/owlcarousel/owl.carousel.min.js' ) }}">
+  </script>
 
 
   <!-- Template Main Javascript File -->
