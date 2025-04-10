@@ -1,39 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Reveal Bootstrap Template</title>
+  <title>{{ "玖蜜沐喜" if lang == "zh" else "Germeemulsi" }}</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
-
-  <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
-
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <!-- Google Fonts-->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+    rel="stylesheet">
+  <!-- Bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Owl Carousel-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='js/owlcarousel/assets/owl.carousel.css') }}"">
+  <script src=" {{ url_for('static', filename='js/owlcarousel/owl.carousel.min.js' ) }}">
+  </script>
+  <!-- Font Awesome -->
+  <script src=" https://kit.fontawesome.com/8ec0406f5a.js" crossorigin="anonymous">
+  </script>
+  <!-- JQuerry -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: Reveal
-    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+  <link rel=" stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body id="body">
@@ -44,15 +36,14 @@
   <section id="topbar" class="d-none d-lg-block">
     <div class="container clearfix">
       <div class="contact-info float-left">
-        <i class="fa fa-envelope-o"></i> <a href="mailto:contact@example.com">contact@example.com</a>
-        <i class="fa fa-phone"></i> +1 5589 55488 55
+        <i class="fa fa-envelope-o"></i><a href="mailto:contact@example.com">globalsales@ubisprout.com</a>
+        <i class="fa fa-phone"><a href="www.ubisprout.com"></i> www.ubisprout.com</a>
+        <i class="fa fa-phone"><a href="www.germeemulsi.com"></i> www.germeemulsi.com</a>
       </div>
       <div class="social-links float-right">
-        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="facebook.com" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="instagran.com" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="linkedin.com" class="linkedin"><i class="fa fa-linkedin"></i></a>
       </div>
     </div>
   </section>
@@ -64,27 +55,19 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#body" class="scrollto">Reve<span>al</span></a></h1>
+        <h1><a href="#body" class="scrollto">Germee<span>Mulsi</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#body">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="menu-active"><a href="#body">{{ "玖蜜沐喜" if lang == "zh" else "Germeemulsi"}}</a></li>
+          <li><a href="#about">{{ "关于我们" if lang == "zh" else "About Us"}}</a></li>
+          <li><a href="#services">{{ "服务" if lang == "zh" else "Service"}}</a></li>
+          <li><a href="#portfolio">{{ "产品" if lang == "zh" else "Product"}}</a></li>
+          <li><a href="#team">{{ "团队" if lang == "zh" else "Team"}}</a></li>
+          <li><a href="#contact">{{ "联络我们" if lang == "zh" else "Contact"}}</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -96,19 +79,24 @@
   <section id="intro">
 
     <div class="intro-content">
-      <h2>Making <span>your ideas</span><br>happen!</h2>
+      <h2>FOODS OF FRSHLY GERMINATED <span>SEEDS, BEANS</span><br>GRAINS, AND NUTS</h2>
       <div>
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-        <a href="#portfolio" class="btn-projects scrollto">Our Projects</a>
+        <a href="#about" class="btn-get-started scrollto">{{ "了解我们" if lang == "zh" else "Get Started"}}</a>
+        <a href="#portfolio" class="btn-projects scrollto">{{ "我们产品" if lang == "zh" else "Our Products"}}</a>
       </div>
     </div>
 
-    <div id="intro-carousel" class="owl-carousel" >
-      <div class="item" style="background-image: url('img/intro-carousel/1.jpg');"></div>
-      <div class="item" style="background-image: url('img/intro-carousel/2.jpg');"></div>
-      <div class="item" style="background-image: url('img/intro-carousel/3.jpg');"></div>
-      <div class="item" style="background-image: url('img/intro-carousel/4.jpg');"></div>
-      <div class="item" style="background-image: url('img/intro-carousel/5.jpg');"></div>
+    <div id="intro-carousel" class="owl-carousel">
+      <div class="item"
+        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/intro_1.png') }}');"></div>
+      <div class="item"
+        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/intro_2.jpg') }}');"></div>
+      <div class="item"
+        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/intro_3.jpg') }}');"></div>
+      <div class="item"
+        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/intro_4.jpg') }}');"></div>
+      <div class="item"
+        style="background-image: url('{{ url_for('static', filename='images/intro-carousel/intro_5.jpg') }}');"></div>
     </div>
 
   </section><!-- #intro -->
@@ -122,17 +110,51 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 about-img">
-            <img src="img/about-img.jpg" alt="">
+            <img src="{{ url_for('static', filename='images/about_1.png') }}">
           </div>
 
-          <div class="col-lg-6 content">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
-            <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+          <div class=" col-lg-6 content">
+            <h2>{{ "玖蜜沐喜" if lang == "zh" else "Germeemulsi"}}</h2>
+            <h3>{{ "品牌定位与价值主张" if lang == "zh" else "Brand Position and Values"}}</h3>
 
             <ul>
-              <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="fa-solid fa-tree"></i>{% if lang == "zh" %}
+                高端自然：以天然、高品质、有机为核心理念，专注于提供以催芽后的种子/豆子/谷物/坚果为基础的食品发展。
+                {% else %}
+                Premium by Nature
+                Rooted in the values of natural, high-quality, and organic ingredients, our brand is dedicated to
+                developing foods made from sprouted seeds, beans, grains, and nuts.
+                {% endif %}
+              </li>
+              <li><i class="fa-solid fa-hand-holding-droplet"></i>{% if lang == "zh" %}
+                "文化内涵：结合“玖”寓意长久，“蜜”代表甜美，“沐”意指润泽，“喜”象征喜悦，将品牌塑造成幸福、健康、自然生活的象征。
+                {% else %}
+                Cultural Essence
+                Inspired by the meanings behind our name — "Jiu" for longevity, "Mi" for sweetness, "Mu" for
+                nourishment, and "Xi" for joy — we embody a brand that represents a life of happiness, health, and
+                natural living.
+                {% endif %}
+              </li>
+              <li><i class="fa-brands fa-pagelines"></i>{% if lang == "zh" %}
+                天然纯净：所有产品采用无添加。
+                {% else %}
+                Pure and Natural
+                All our products are free from additives, crafted with a commitment to purity.
+                {% endif %}
+              </li>
+              <li><i class="fa-solid fa-gifts"></i>{% if lang == "zh" %}
+                多元体验：覆盖食品、礼品等多领域需求。
+                {% else %}
+                Diverse Experiences
+                We cater to a wide range of needs, from everyday foods to thoughtful gifts.
+                {% endif %}
+              </li>
+              <li><i class="fa-solid fa-recycle"></i>{% if lang == "zh" %}环保关怀：产品包装环保可降解，传递可持续理念。
+                {% else %}
+                Sustainable Care
+                Our packaging is eco-friendly and biodegradable, reflecting our dedication to sustainability.
+                {% endif %}
+              </li>
             </ul>
 
           </div>
@@ -147,48 +169,351 @@
     <section id="services">
       <div class="container">
         <div class="section-header">
-          <h2>Services</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <h2>{% if lang == "zh" %}食物的源头- 催芽
+            {% else %}
+            Sustainable Care
+            Our packaging is eco-friendly and biodegradable, reflecting our dedication to sustainability.</h2>
+          {% endif %}
+          <p>
+            {% if lang == "zh" %}
+            优比芽催芽科技 让种子在适当的环境中发芽
+            全球首例——催芽技术+种植设备——高效率低成本且无添加！
+            {% else %}
+            Sustainable Care
+            Our packaging is eco-friendly and biodegradable, reflecting our dedication to sustainability.
+            {% endif %}
+          </p>
+          <h3>{% if lang == "zh" %}
+            植物奶-一个全世界的趋势，植物蛋白食品的前景光明广阔
+            {% else %}
+            Sustainable Care
+            Our packaging is eco-friendly and biodegradable, reflecting our dedication to sustainability.
+            {% endif %}
+
+          </h3>
         </div>
 
         <div class="row">
 
           <div class="col-lg-6">
             <div class="box wow fadeInLeft">
+              <div class="icon"><i class="fa-solid fa-shop"></i></div>
+              <h4 class="title"><a href=""> {% if lang == "zh" %}市场产品少{% else %}Few Products on market{% endif %}</a>
+              </h4>
+              <p class="description">{% if lang == "zh" %}目前全球市场上植物奶工业化生产常温包装仅有燕麦奶/杏仁奶豆奶/椰奶/米奶等选择性少且营养含量较低{% else %} {%
+                endif %}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight">
+              <div class="icon"><i class="fa-solid fa-earth-europe"></i></div>
+              <h4 class="title"><a href="">{% if lang == "zh" %}先进市场高涨
+                  {% else %}
+                  {% endif %}
+                </a></h4>
+              <p class="description">{% if lang == "zh" %}澳洲植物奶从20年前一路上涨，现在占有全球50%的市场美国也一路上涨到将近全球30%{% else %} {% endif
+                %}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa-solid fa-industry"></i></div>
+              <h4 class="title"><a href="">{% if lang == "zh" %}食品工业三化{% else %}{% endif %}</a></h4>
+              <p class="description">{% if lang == "zh" %}全球食品工业三化优质化/营养化/功能化不可逆的发展趋势世界各国对植物奶的饮用及使用都大量增加{% else %}{%
+                endif %}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa-solid fa-seedling"></i></div>
+              <h4 class="title"><a href="">{% if lang == "zh" %}植物奶超牛奶{% else %}{% endif %}
+                </a></h4>
+              <p class="description">{% if lang == "zh" %}全球有机与功能性食品的开发及健康饮食和体态管理的趋势加上动物疫病的食安问题植物奶的成长率已经高于牛奶{% else %}{%
+                endif %}
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa-solid fa-key"></i></div>
+              <h4 class="title"><a href="">{% if lang == "zh" %}全球专利设备{% else %}
+                  {% endif %}
+                </a></h4>
+              <p class="description">{% if lang ==
+                "zh"%}奈米有机零添加芽菜生产设备是利用高新技术加上材料科学将矿物质和抑菌材料植入芽菜培植桶/盘，根据不同芽菜的特性设定相宜的磁场与能量场通过机械化/自动化/智能化/规模化彻底解决了芽菜生产过程{%
+                else %}{% endif %}</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa-solid fa-flag"></i></div>
+              <h4 class="title"><a href="">{% if lang == "zh" %}中國市場{% else %}
+                  {% endif %}
+                </a></h4>
+              <p class="description">{% if lang ==
+                "zh"%}针对我国食品结构中蛋白质偏低、奶源缺乏的问题，开发含乳饮料蛋白新品种，丰富乳制品市场，成为食品工业的重要任务植物蛋白饮料的迅速发展，得益于消费者健康意识的提升和对企业品牌、产品多样化的追求{%
+                else %}{% endif %}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Intro Section
+    ============================-->
+    <section id="intro" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 about-img">
+            <img src="{{url_for('static', filename='images/about_2.jpg' )}}" alt="">
+          </div>
+
+          <div class="col-lg-6 content">
+            <div class="section-header">
+              <h2>{{ "全球首例——催芽技术" if lang == "zh" else "Germeemulsi"}}</h2>
+              <h3>{{ "差异化产品——全球化市场" if lang == "zh" else "Brand Position and Values"}}</h3>
+            </div>
+            <p>{% if lang == "zh" %}
+              当前，中国大豆产量全球排名第四位，大豆消费量和大豆进口量均居全球第一位但，目前我国大豆深加工能力不到10%，深加工产品科技附加值较低，大豆深加工产业链不完整其中，植物蛋白饮品具有低胆固醇、低饱和脂肪、含有植物蛋白、健康养生等优点，符合健康消费趋势而，胚豆芽
+              是所有蔬菜里“植物蛋白”含量最高的蔬菜，并兼具食疗作用 ！
+              {% else %}
+              {% endif %}
+            </p>
+            <h3>
+              {% if lang == "zh" %}
+              胚芽豆的营养成分高于原豆， 尤其是对人体有益的抗氧化剂成份！
+              {% else %}
+              {% endif %}
+              <h3>
+                {% if lang == "zh" %}
+                因为，胚芽豆：
+                {% else %}
+                {% endif %}
+              </h3>
+            </h3>
+            <ul>
+              <li><i class="ion-android-checkmark-circle"></i>{% if lang == "zh" %}
+                唤醒了豆子的维生素以及 B群的增加
+                {% else %}
+                Premium by Nature
+                Rooted in the values of natural, high-quality, and organic ingredients, our brand is dedicated to
+                developing foods made from sprouted seeds, beans, grains, and nuts.
+                {% endif %}
+              </li>
+              <li><i class="ion-android-checkmark-circle"></i>{% if lang == "zh" %}
+                胚芽中释放了被螯合的微量元素，让胚芽豆具备更多的营养价值
+                {% else %}
+                Cultural Essence
+                Inspired by the meanings behind our name — "Jiu" for longevity, "Mi" for sweetness, "Mu" for
+                nourishment, and "Xi" for joy — we embody a brand that represents a life of happiness, health, and
+                natural living.
+                {% endif %}
+              </li>
+              <li><i class="ion-android-checkmark-circle"></i>{% if lang == "zh" %}
+                胚芽豆在发芽过程里，痛风因子【嘌呤】也大量的减少
+                {% else %}
+                Pure and Natural
+                All our products are free from additives, crafted with a commitment to purity.
+                {% endif %}
+              </li>
+              <li><i class="ion-android-checkmark-circle"></i>{% if lang == "zh" %}
+                发芽后的胚芽豆的抗氧化剂多酚及黄酮类元素也增加很多
+                {% else %}
+                Diverse Experiences
+                We cater to a wide range of needs, from everyday foods to thoughtful gifts.
+                {% endif %}
+              </li>
+              <li><i class="ion-android-checkmark-circle"></i>{% if lang == "zh" %}发芽后的胚芽豆膳食纤维增加了，人体需要的赖氨酸氨基酸也增加了
+                {% else %}
+                Sustainable Care
+                Our packaging is eco-friendly and biodegradable, reflecting our dedication to sustainability.
+                {% endif %}
+              </li>
+            </ul>
+            <h3>{% if lang == "zh" %}
+              我们优碧芽专利催芽技术与设备科技，能让种子在适当的环境中发芽，是全球首例的植物催芽科技{% else %}{% endif %}
+            </h3>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Services_2 Section
+    ============================-->
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>{% if lang == "zh" %}多样化的 植物蛋白营养 新鲜食材
+            {% else %}
+            Sustainable Care
+            Our packaging is eco-friendly and biodegradable, reflecting our dedication to sustainability.</h2>
+          {% endif %}
+          <h3>{% if lang == "zh" %}
+            胚芽奶及胚芽豆對人體健康的優勢與特色
+            {% else %}
+            Sustainable Care
+            Our packaging is eco-friendly and biodegradable, reflecting our dedication to sustainability.
+            {% endif %}
+          </h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft">
               <div class="icon"><i class="fa fa-bar-chart"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.</p>
+              <h4 class="title"><a href=""></a> {% if lang == "zh" %}增加养份利用{% else %}Few Products on market{% endif %}
+              </h4>
+              <p class="description">{% if lang == "zh" %}发芽会分解植酸和酶抑制剂等抗营养物质，使钙、镁和铁等矿物质更容易被吸收{% else %} {%
+                endif %}
+              </p>
             </div>
           </div>
 
           <div class="col-lg-6">
             <div class="box wow fadeInRight">
               <div class="icon"><i class="fa fa-picture-o"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata nodera clas.</p>
+              <h4 class="title"><a href="">{% if lang == "zh" %}高级蛋白质和氨基酸
+                  {% else %}
+                  {% endif %}
+                </a></h4>
+              <p class="description">{% if lang == "zh" %}发芽过程提高了蛋白质含量和必需氨基酸的可用性{% else %} {% endif
+                %}
+              </p>
             </div>
           </div>
 
           <div class="col-lg-6">
             <div class="box wow fadeInLeft" data-wow-delay="0.2s">
               <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur trinige zareta lobur trade.</p>
+              <h4 class="title"><a href="">{% if lang == "zh" %}提高消化率{% else %}{% endif %}</a></h4>
+              <p class="description">{% if lang == "zh" %}发芽部分分解复杂的碳水化合物、纤维和蛋白质，使胚芽奶更容易消化{% else %}{%
+                endif %}
+              </p>
             </div>
           </div>
 
           <div class="col-lg-6">
             <div class="box wow fadeInRight" data-wow-delay="0.2s">
               <div class="icon"><i class="fa fa-map"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum rideta zanox satirente madera</p>
+              <h4 class="title"><a href="">{% if lang == "zh" %}天然甜味{% else %}{% endif %}
+                </a></h4>
+              <p class="description">{% if lang == "zh" %}发芽过程可以将一些淀粉转化为单糖，为胚芽奶带来自然更甜的味道{% else %}{%
+                endif %}
+              </p>
             </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+              <h4 class="title"><a href="">{% if lang == "zh" %}增强的抗氧化剂和维生素{% else %}
+                  {% endif %}
+                </a></h4>
+              <p class="description">{% if lang ==
+                "zh"%}发芽通常会增加维生素含量，尤其是叶酸等 B族维生素，以及维生素 C和维生素 E等抗氧化剂程{%
+                else %}{% endif %}</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-map"></i></div>
+              <h4 class="title"><a href="">{% if lang == "zh" %}更奶油的质地和更浓郁的风味{% else %}
+                  {% endif %}
+                </a></h4>
+              <p class="description">{% if lang ==
+                "zh"%}发芽可以导致更光滑、更奶油的质地，因为发芽的坚果和种子会释放更多的天然油脂这
+                种质地可以使牛奶非常适合用于咖啡、冰沙或烹饪{%
+                else %}{% endif %}</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+              <h4 class="title"><a href="">{% if lang == "zh" %}较低的过敏性{% else %}
+                  {% endif %}
+                </a></h4>
+              <p class="description">{% if lang ==
+                "zh"%}发芽可能有助于减少某些坚果和豆类的过敏可能性{%
+                else %}{% endif %}</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-map"></i></div>
+              <h4 class="title"><a href="">{% if lang == "zh" %}更奶油的质地和更浓郁的风味{% else %}
+                  {% endif %}
+                </a></h4>
+              <p class="description">{% if lang ==
+                "zh"%}发芽植物奶是有机的，加工程
+                度最低{%
+                else %}{% endif %}</p>
+            </div>
+
           </div>
 
         </div>
+    </section><!-- #services_2 -->
 
+
+    <!--Table-->
+    <section id="table" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>
+            胚芽奶比豆奶更营养，且可替代动物奶
+          </h2>
+          <h3>豆奶与胚芽奶的异同</h3>
+          </caption>
+          <table>
+            <caption>
+
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">豆奶</th>
+                <th scope="col">胚芽奶</th>
+              </tr>
+              <thead>
+              <tbody>
+                <tr>
+                  <th scope="row">原料來源</th>
+                  <td>干的豆子</td>
+                  <td>有1~2公分的胚芽豆</td>
+                </tr>
+                <tr>
+                  <th scope="row">營養價值</th>
+                  <td>較低</td>
+                  <td>较高：胚芽含有丰富的维生素E、叶酸和微量元素，经过发芽的豆类在营养吸收和生物利用度上高，尤其是抗氧化成分和矿物质的含量更高。 有更多的人体需要的氨基酸，较低的嘌呤</td>
+                </tr>
+                <tr>
+                  <th>製成</th>
+                  <td>先去豆壳，高温煮沸过滤营养成分减少巨大</td>
+                  <td>不去壳，不去渣，保留全豆所有价值，将营养成分锁住不流失。全谷物饮食更健康</td>
+                </tr>
+                <tr>
+                  <th>殺菌</th>
+                  <td>高温或巴式杀菌</td>
+                  <td>高温高压或巴式杀菌</td>
+                </tr>
+                <tr>
+                  <th>种类</th>
+                  <td>大豆，黑豆，红豆，绿豆，鹰嘴豆，花生。。其它豆子/种子/坚果/花胚芽/杏仁胚芽/燕麦/香菜/小麦草胚芽
+                    等</td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
       </div>
-    </section><!-- #services -->
+    </section>
 
     <!--==========================
       Clients Section
@@ -196,21 +521,13 @@
     <section id="clients" class="wow fadeInUp">
       <div class="container">
         <div class="section-header">
-          <h2>Clients</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <h2>{% if lang == "zh" %}农食科技{% else %}{% endif %}</h2>
+          <p>{% if lang == "zh" %}胚芽奶 一个全球空白的市场
+            全球第一个 零添加 无毒 健康有机 “活”的胚芽豆与芽菜种植技术与设备{% else %}{% endif %}</p>
         </div>
-
-        <div class="owl-carousel clients-carousel">
-          <img src="img/clients/client-1.png" alt="">
-          <img src="img/clients/client-2.png" alt="">
-          <img src="img/clients/client-3.png" alt="">
-          <img src="img/clients/client-4.png" alt="">
-          <img src="img/clients/client-5.png" alt="">
-          <img src="img/clients/client-6.png" alt="">
-          <img src="img/clients/client-7.png" alt="">
-          <img src="img/clients/client-8.png" alt="">
+        <div>
+          <img src={{ url_for('static', filename='images/process.jpg' )}}>
         </div>
-
       </div>
     </section><!-- #clients -->
 
@@ -220,8 +537,8 @@
     <section id="portfolio" class="wow fadeInUp">
       <div class="container">
         <div class="section-header">
-          <h2>Our Portfolio</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <h2>胚芽蛋白食品系列</h2>
+          <p>植物胚芽豆全产业链展快速可行的产业及约方向，以专利种植设备为核心，主营工厂加上联合生产，达200种衍生产品</p>
         </div>
       </div>
 
@@ -230,10 +547,12 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/1.jpg" class="portfolio-popup">
-                <img src="img/portfolio/1.jpg" alt="">
+              <a href={{ url_for('static', filename='images/portfolio/portfolio-1.jpg' ) }} class="portfolio-popup">
+                <img src={{ url_for('static', filename='images/portfolio/portfolio-1.jpg' ) }} alt="">
                 <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 1</h2></div>
+                  <div class="portfolio-info">
+                    <h2 class="wow fadeInUp">生鲜产品</h2>
+                  </div>
                 </div>
               </a>
             </div>
@@ -241,10 +560,12 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/2.jpg" class="portfolio-popup">
-                <img src="img/portfolio/2.jpg" alt="">
+              <a href={{ url_for('static', filename='images/portfolio/portfolio-2.jpg' ) }} class="portfolio-popup">
+                <img src={{ url_for('static', filename='images/portfolio/portfolio-2.jpg' ) }} alt="">
                 <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 2</h2></div>
+                  <div class="portfolio-info">
+                    <h2 class="wow fadeInUp">胚芽奶饮品</h2>
+                  </div>
                 </div>
               </a>
             </div>
@@ -252,10 +573,12 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/3.jpg" class="portfolio-popup">
-                <img src="img/portfolio/3.jpg" alt="">
+              <a href="{{ url_for('static', filename='images/portfolio/portfolio-3.jpg' ) }}" class="portfolio-popup">
+                <img src={{ url_for('static', filename='images/portfolio/portfolio-3.jpg' ) }} alt="">
                 <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 3</h2></div>
+                  <div class="portfolio-info">
+                    <h2 class="wow fadeInUp">烘干豆与粉</h2>
+                  </div>
                 </div>
               </a>
             </div>
@@ -263,10 +586,12 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/4.jpg" class="portfolio-popup">
-                <img src="img/portfolio/4.jpg" alt="">
+              <a href={{ url_for('static', filename='images/portfolio/portfolio-4.jpg' ) }} class="portfolio-popup">
+                <img src={{ url_for('static', filename='images/portfolio/portfolio-4.jpg' ) }} alt="">
                 <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 4</h2></div>
+                  <div class="portfolio-info">
+                    <h2 class="wow fadeInUp">正态鲜肉 水饺锅贴</h2>
+                  </div>
                 </div>
               </a>
             </div>
@@ -274,10 +599,12 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/5.jpg" class="portfolio-popup">
-                <img src="img/portfolio/5.jpg" alt="">
+              <a href={{ url_for('static', filename='images/portfolio/portfolio-5.jpg' ) }} class="portfolio-popup">
+                <img src={{ url_for('static', filename='images/portfolio/portfolio-5.jpg' ) }} alt="">
                 <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 5</h2></div>
+                  <div class="portfolio-info">
+                    <h2 class="wow fadeInUp">主副闲甜食</h2>
+                  </div>
                 </div>
               </a>
             </div>
@@ -285,112 +612,20 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/6.jpg" class="portfolio-popup">
-                <img src="img/portfolio/6.jpg" alt="">
+              <a href={{ url_for('static', filename='images/portfolio/portfolio-6.jpg' ) }} class="portfolio-popup">
+                <img src={{ url_for('static', filename='images/portfolio/portfolio-6.jpg' ) }} alt="">
                 <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 6</h2></div>
+                  <div class="portfolio-info">
+                    <h2 class="wow fadeInUp">夹饼馒头</h2>
+                  </div>
                 </div>
               </a>
             </div>
           </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/7.jpg" class="portfolio-popup">
-                <img src="img/portfolio/7.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 7</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/8.jpg" class="portfolio-popup">
-                <img src="img/portfolio/8.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 8</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
         </div>
 
       </div>
     </section><!-- #portfolio -->
-
-    <!--==========================
-      Testimonials Section
-    ============================-->
-    <section id="testimonials" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Testimonials</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
-        </div>
-        <div class="owl-carousel testimonials-carousel">
-
-            <div class="testimonial-item">
-              <p>
-                <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-              </p>
-              <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
-              <h3>Saul Goodman</h3>
-              <h4>Ceo &amp; Founder</h4>
-            </div>
-
-            <div class="testimonial-item">
-              <p>
-                <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-              </p>
-              <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
-              <h3>Sara Wilsson</h3>
-              <h4>Designer</h4>
-            </div>
-
-            <div class="testimonial-item">
-              <p>
-                <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-              </p>
-              <img src="img/testimonial-3.jpg" class="testimonial-img" alt="">
-              <h3>Jena Karlis</h3>
-              <h4>Store Owner</h4>
-            </div>
-
-            <div class="testimonial-item">
-              <p>
-                <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-              </p>
-              <img src="img/testimonial-4.jpg" class="testimonial-img" alt="">
-              <h3>Matt Brandon</h3>
-              <h4>Freelancer</h4>
-            </div>
-
-            <div class="testimonial-item">
-              <p>
-                <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-              </p>
-              <img src="img/testimonial-5.jpg" class="testimonial-img" alt="">
-              <h3>John Larson</h3>
-              <h4>Entrepreneur</h4>
-            </div>
-
-        </div>
-
-      </div>
-    </section><!-- #testimonials -->
 
     <!--==========================
       Call To Action Section
@@ -399,14 +634,13 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-9 text-center text-lg-left">
-            <h3 class="cta-title">Call To Action</h3>
-            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3 class="cta-title">立即加入我们</h3>
+            <p class="cta-text">无论你是想投资一个有温度、有理念的品牌，还是希望将纯天然、无添加的健康食品带入日常生活，我们诚挚邀请你与我们一起出发。</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+            <a class="cta-btn align-middle" href="mailto:chinasales@ubisprout.com">联络我们</a>
           </div>
         </div>
-
       </div>
     </section><!-- #call-to-action -->
 
@@ -416,74 +650,39 @@
     <section id="team" class="wow fadeInUp">
       <div class="container">
         <div class="section-header">
-          <h2>Our Team</h2>
+          <h2>我们的团队</h2>
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="img/team-1.jpg" alt=""></div>
+              <div class="pic"><img src={{ url_for('static', filename='images/team/head-1.jpg' ) }}></div>
               <div class="details">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
+                <h4>赖弘基</h4>
+                <span>执行长</span>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="img/team-2.jpg" alt=""></div>
+              <div class="pic"><img src={{ url_for('static', filename='images/team/head-2.jpg' ) }}></div>
               <div class="details">
-                <h4>Sarah Jhinson</h4>
-                <span>Product Manager</span>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
+                <h4>张富咏</h4>
+                <span>研发长</span>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="img/team-3.jpg" alt=""></div>
+              <div class="pic"><img src={{ url_for('static', filename='images/team/head-3.jpg' ) }}></div>
               <div class="details">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team-4.jpg" alt=""></div>
-              <div class="details">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
+                <h4>谢明哲</h4>
+                <span>科学顾问</span>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section><!-- #team -->
 
@@ -494,7 +693,7 @@
       <div class="container">
         <div class="section-header">
           <h2>Contact Us</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <p>用下面的联络渠道联络我们</p>
         </div>
 
         <div class="row contact-info">
@@ -503,61 +702,28 @@
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <address>中国台湾台北市中山区建国北路三段92号3楼B311室</address>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <h3>全球销售</h3>
+              <p><a href="mailto:globalsales@ubisprout.com">chinasales@ubisprout.com</a></p>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
-              <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <h3>中国销售</h3>
+              <p><a href="mailto:chinasales@ubisprout.com">chinasales@ubisprout.com</a></p>
             </div>
           </div>
-
         </div>
-      </div>
-
-      <div id="google-map" data-latitude="40.713732" data-longitude="-74.0092704"></div>
-
-      <div class="container">
-        <div class="form">
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validation"></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-              <div class="validation"></div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-          </form>
-        </div>
-
       </div>
     </section><!-- #contact -->
-
   </main>
 
   <!--==========================
@@ -566,7 +732,7 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
+        &copy; Copyright <strong>荷蘭商優必特有限公司台灣分公司</strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!--
@@ -575,30 +741,20 @@
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Reveal
         -->
-        <a href="https://bootstrapmade.com/">Free Bootstrap Templates</a> by BootstrapMade
       </div>
     </div>
   </footer><!-- #footer -->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Javascripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-  <script src="lib/sticky/sticky.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 </body>
+
 </html>
